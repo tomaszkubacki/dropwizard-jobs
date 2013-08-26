@@ -54,6 +54,12 @@ public void initialize(Bootstrap<DelaSearchConfiguration> bootstrap) {
   bootstrap.addBundle(new JobsBundle());
 }
 ```
+Be aware that Jobs will be searched by reflection in current package. If you define your
+jobs in a different package create the bundle like this:
+
+```java
+  new new JobsBundle("com.yourexamplepackage.jobs");
+```
 
 ## Available job types
 
